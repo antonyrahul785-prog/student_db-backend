@@ -94,7 +94,8 @@ PUT {{base_url}}/auth/reset-password/:token
 Content-Type: application/json
 
 {
-    "password": "newpassword123"
+    "password": "newpassword123",
+    "confirmPassword": "newpassword123"
 }
 ```
 
@@ -178,16 +179,7 @@ Content-Type: application/json
 }
 ```
 
-### **3.7 Reset User Password (Admin)**
-```json
-PUT {{base_url}}/users/{{user_id}}/reset-password
-Authorization: Bearer {{admin_token}}
-Content-Type: application/json
 
-{
-    "newPassword": "newsecurepassword123"
-}
-```
 
 ## **4. STUDENT MANAGEMENT APIs (`studentRoutes.js`)**
 
@@ -762,3 +754,4 @@ LMS API Collection
 
 
 Each folder should have the appropriate tests and pre-request scripts set up.
+
